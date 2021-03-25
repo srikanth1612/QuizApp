@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		847CECEE260CBF01001B0266 /* QuizApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 847CECE4260CBF01001B0266 /* QuizApp.framework */; };
-		847CECF3260CBF01001B0266 /* QuizAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CECF2260CBF01001B0266 /* QuizAppTests.swift */; };
-		847CECF5260CBF01001B0266 /* QuizApp.h in Headers */ = {isa = PBXBuildFile; fileRef = 847CECE7260CBF01001B0266 /* QuizApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		847CED04260CBFD5001B0266 /* FlowTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CED03260CBFD5001B0266 /* FlowTest.swift */; };
+		847CED08260CC076001B0266 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CED07260CC076001B0266 /* Flow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,11 +24,12 @@
 
 /* Begin PBXFileReference section */
 		847CECE4260CBF01001B0266 /* QuizApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QuizApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		847CECE7260CBF01001B0266 /* QuizApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuizApp.h; sourceTree = "<group>"; };
 		847CECE8260CBF01001B0266 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		847CECED260CBF01001B0266 /* QuizAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		847CECF2260CBF01001B0266 /* QuizAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAppTests.swift; sourceTree = "<group>"; };
 		847CECF4260CBF01001B0266 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		847CED02260CBFD5001B0266 /* QuizAppTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QuizAppTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		847CED03260CBFD5001B0266 /* FlowTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowTest.swift; sourceTree = "<group>"; };
+		847CED07260CC076001B0266 /* Flow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +72,8 @@
 		847CECE6260CBF01001B0266 /* QuizApp */ = {
 			isa = PBXGroup;
 			children = (
-				847CECE7260CBF01001B0266 /* QuizApp.h */,
 				847CECE8260CBF01001B0266 /* Info.plist */,
+				847CED07260CC076001B0266 /* Flow.swift */,
 			);
 			path = QuizApp;
 			sourceTree = "<group>";
@@ -80,8 +81,9 @@
 		847CECF1260CBF01001B0266 /* QuizAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				847CECF2260CBF01001B0266 /* QuizAppTests.swift */,
 				847CECF4260CBF01001B0266 /* Info.plist */,
+				847CED03260CBFD5001B0266 /* FlowTest.swift */,
+				847CED02260CBFD5001B0266 /* QuizAppTests-Bridging-Header.h */,
 			);
 			path = QuizAppTests;
 			sourceTree = "<group>";
@@ -93,7 +95,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				847CECF5260CBF01001B0266 /* QuizApp.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,9 +148,11 @@
 				TargetAttributes = {
 					847CECE3260CBF01001B0266 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					847CECEC260CBF01001B0266 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				847CED08260CC076001B0266 /* Flow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				847CECF3260CBF01001B0266 /* QuizAppTests.swift in Sources */,
+				847CED04260CBFD5001B0266 /* FlowTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +344,7 @@
 		847CECF9260CBF01001B0266 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -357,6 +362,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sree.QuizApp;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -364,6 +370,7 @@
 		847CECFA260CBF01001B0266 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -388,6 +395,8 @@
 		847CECFC260CBF01001B0266 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = NK39N3UNXV;
@@ -399,6 +408,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sree.QuizAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "QuizAppTests/QuizAppTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -406,6 +417,8 @@
 		847CECFD260CBF01001B0266 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = NK39N3UNXV;
@@ -417,6 +430,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sree.QuizAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "QuizAppTests/QuizAppTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
